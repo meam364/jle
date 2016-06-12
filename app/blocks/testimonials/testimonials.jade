@@ -1,0 +1,12 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../testimonial/testimonial
+
+mixin testimonials()
+	+b.testimonials&attributes(attributes)
+		.container
+			+title() JLE Driver Testimonials
+			+subtitle() We&nbsp;treat our drivers right and we&nbsp;have one of&nbsp;the industry&rsquo;s lowest driver turn over rate which says all you need to&nbsp;know of&nbsp;how we&nbsp;value drivers like yourself. Check out what our drivers say about us!
+			+e.list
+				+testimonial({right: true, name: 'Bradley Smith', photo: 'brad', post: 'JLE Driver', text: '&laquo;Hi, my&nbsp;name is&nbsp;Bradley Smith, AKA ‘Buford’. I&nbsp;would like to&nbsp;share why I&nbsp;enjoy working at&nbsp;JLE Industries. First and foremost is&nbsp;the pay. I&nbsp;make 52 cents per mile at&nbsp;my&nbsp;experience level. The dispatch ensures that I&nbsp;get home often to&nbsp;see my&nbsp;family. My&nbsp;wife considers the ‘executive style’ benefits to&nbsp;be&nbsp;the best part of&nbsp;my&nbsp;job. We&nbsp;have the best insurance plan offered in&nbsp;the industry and paid vacations and an&nbsp;employer matching 401K. I&nbsp;am&nbsp;always treated with respect. We&nbsp;drive new tractors and trailers that are equipped with everything I&nbsp;need to&nbsp;do&nbsp;my&nbsp;job. Dispatch does their very best to&nbsp;send me&nbsp;where I&nbsp;want to&nbsp;go&nbsp;and have me&nbsp;home when I&nbsp;need to&nbsp;be&nbsp;home. The executives have an&nbsp;open door policy. Nowhere have I&nbsp;worked could I&nbsp;walk into the executives’ offices and resolve an&nbsp;issue. They have an&nbsp;open door policy.&raquo;'})
+				+testimonial({mini: true, name: 'Mark Moser', photo: 'mark', post: 'JLE Driver', text: '&laquo;Newer equipment, great atmosphere and ability to&nbsp;earn a&nbsp;good living. I&nbsp;have enjoyed the time I&nbsp;spent at&nbsp;JLE Industries. I&nbsp;look forward to&nbsp;several more years helping the company grow.&raquo;'})

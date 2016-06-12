@@ -1,0 +1,9 @@
+include ../title/title
+include ../subtitle/subtitle
+
+mixin hiring()
+	+b.hiring&attributes(attributes)
+		.container
+			+title() Hiring Locations
+			+subtitle() We&rsquo;re currently looking for OTR drivers within a&nbsp;500 mile radius in&nbsp;and around Dunbar, PA&nbsp;in&nbsp;the United States of&nbsp;America.
+			+e('img').map(src='assets/images/map.jpg' class='img-responsive')

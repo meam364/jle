@@ -1,0 +1,48 @@
+.support
+	background #FBFBFB
+	border-top 3px solid #F0F0F0
+	border-bottom 3px solid #F0F0F0
+	padding 28px 0 70px
+
+	&__list
+		margin-top 44px
+
+	&__item
+		text-align center
+		@media (max-width 992px)
+			margin-bottom 16px
+			display flex
+			justify-content center
+			align-items center
+
+		@media (max-width 480px)
+			display block
+
+		&_reverse
+			@media (max-width 992px)
+				flex-direction row-reverse
+				.support__photo
+					margin-right 0
+					margin-left 32px
+			@media (max-width 762px)
+				.support__photo
+					margin-left auto
+					margin-right auto
+	&__photo
+		margin 0 auto
+		@media (max-width 992px)
+			margin 0
+			margin-right 32px
+		@media (max-width 762px)
+			margin-right auto
+			margin-left auto
+
+	&__name
+		font-family montserat
+		color #FC354B
+		font-size 24px
+		margin 14px 0 5px
+
+	&__post
+		font-size 17px
+		color #9E9E9E

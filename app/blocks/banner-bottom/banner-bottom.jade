@@ -1,0 +1,29 @@
+include ../form/form
+
+mixin banner-bottom()
+	+b.banner-bottom&attributes(attributes)
+		.container
+			.row
+				.col-md-6
+					+e.title Take your first step to&nbsp;joining our team at&nbsp;JLE Industries!
+					+e('a').call Call Us: (724) 812-0057
+					+e.subtitle With our industry leading pay, benefits, and our driver oriented company, join our team is&nbsp;a&nbsp;no&nbsp;brainer! Simply fill out the form to&nbsp;the right to&nbsp;get started.
+				.col-md-6
+					+form()
+						+e('input').input(placeholder='Name' name='name')
+						+e('input').input(type='email' placeholder='Email' name='email')
+						+e('input').input(type='phone' placeholder='Phone' name='phone')
+						+e('label').label
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='No')
+							| No
+						+e('label').label
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='No')
+							| No

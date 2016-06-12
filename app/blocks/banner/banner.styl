@@ -1,0 +1,94 @@
+.banner
+	background url(../images/banner-bg.jpg) no-repeat 50% 50%
+	background-size cover
+	z-index 1
+	position relative
+	text-align center
+	padding-top 18px
+	padding-bottom 70px
+	margin-bottom 40px
+	&::after
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background rgba(0, 0, 0, .78)
+		z-index -1
+		content ''
+
+	&__head
+		text-align justify
+		font-size 0
+		margin-bottom 42px
+		@media (max-width 762px)
+			text-align center
+			margin-bottom 16px
+		&::after
+			width 100%
+			display inline-block
+			height 0
+			content ''
+
+	&__logo
+		display inline-block
+		vertical-align middle
+		height 12px
+		@media (max-width 762px)
+			display block
+			margin 0 auto 8px
+
+	&__call
+		display inline-block
+		vertical-align middle
+		color #fff
+		font-size: 20px
+		font-family montserat
+		font-weight 700
+
+		&:hover
+			text-decoration none
+			color #fff
+
+	&__title
+		color #fff
+		font-size 41px
+		font-family montserat
+		font-weight 700
+		margin-bottom 8px
+		@media (max-width 992px)
+			font-size 30px
+
+
+	&__subtitle
+		font-size 17px
+		color #fff
+		max-width: 798px
+		margin 0 auto
+		line-height 24px
+		margin-bottom 25px
+
+	&__subtitle-highlight
+		font-weight 700
+		font-size 21px
+
+	&__scroll
+		position absolute
+		bottom 0
+		left 50%
+		transform translate(-50%, 50%)
+		width 100px
+		height 100px
+		background #fff
+		border-radius 50%
+
+	&__scroll-icon
+		width 48px
+		height 48px
+		margin-top 25px
+		transform scale(-1)
+		cursor pointer
+		color #000
+		transition color .2s ease-in-out
+		&:hover
+			color lightness(#000, 40)

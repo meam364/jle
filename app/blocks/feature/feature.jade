@@ -1,0 +1,9 @@
+mixin feature(data)
+	-data = data || {}
+	+b.feature&attributes(attributes)
+		+e.head
+			+e('img').icon(src='assets/images/'+data.icon+'.png')
+			+e.name= data.name
+		+e('ul').list
+			each item in data.items
+				+e('li').item= item

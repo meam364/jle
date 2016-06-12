@@ -1,0 +1,9 @@
+mixin testimonial(data)
+	-data = data || {}
+	+b.testimonial(class=data.right ? 'testimonial_right' : '' class=data.mini ? 'testimonial_mini' : '')
+		+e.info
+			+e('img').photo(src='assets/images/'+data.photo+'.jpg')
+			+e.details
+				+e.name= data.name
+				+e.post= data.post
+		+e('p').text!= data.text

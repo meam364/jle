@@ -1,0 +1,3 @@
+mixin button(data)
+	-data= data || {}
+	+b('a').button(href=data.href class='button_'+data.mod class='button_size_'+data.size)= data.text

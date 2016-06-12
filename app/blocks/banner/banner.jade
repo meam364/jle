@@ -1,0 +1,36 @@
+include ../icon/icon
+include ../form/form
+
+mixin banner()
+	+b.banner&attributes(attributes)
+		.container
+			+e.head
+				+e('img').logo(class='img-responsive' src='assets/images/logo.png')
+				+e('a').call Call Us: (724) 812-0057
+			+e.title We&rsquo;re Hiring Class A&nbsp;Flatbed OTR Drivers
+			+e.subtitle We&rsquo;re offering
+				+e('span').subtitle-highlight $52K&nbsp;&mdash; $70K a&nbsp;year,
+				| full benefits, sign on&nbsp;bonus, and you&rsquo;ll be&nbsp;home weekly. Please apply if&nbsp;you have at&nbsp;least 2 years of&nbsp;OTR experience and a&nbsp;3 year clean driving record.
+			+form()
+				+e('label').label(for='name') Name
+				+e('input').input(id='name' name='name')
+				+e('label').label(for='email') Email
+				+e('input').input(type='email' id='email' name='email')
+				+e('label').label(for='phone') Phone
+				+e('input').input(id='phone' type='phone' name='phone')
+				+e('label').label Have at&nbsp;least 2 years of&nbsp;OTR experience?
+				+e('label').radio
+					+e('input').radio-input(type='radio' name='otr' value='yes')
+					| Yes
+				+e('label').radio
+					+e('input').radio-input(type='radio' name='otr' value='No')
+					| No
+				+e('label').label Have a&nbsp;clean driving record in&nbsp;past 3 years?
+				+e('label').radio
+					+e('input').radio-input(type='radio' name='clean-driving' value='yes')
+					| Yes
+				+e('label').radio
+					+e('input').radio-input(type='radio' name='clean-driving' value='No')
+					| No
+			+e.scroll
+				+icon('arrows-circle').scroll-icon

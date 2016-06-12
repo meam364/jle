@@ -1,0 +1,16 @@
+import('sprites/*')
+import('helpers/svg-size')
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+@import 'helpers/helpers'
+@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+
+import('../blocks/**/*')
+body
+    font-family openSans
+
+.container
+    @media (min-width 992px)
+        width 960px

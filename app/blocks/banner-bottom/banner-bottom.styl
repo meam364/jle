@@ -1,0 +1,48 @@
+.banner-bottom
+	background url(../images/bottom-bg.jpg) no-repeat 50% 50%
+	background-size cover
+	position relative
+	z-index 1
+	padding 20px 0
+	text-align center
+
+	&__title
+		font-family montserat
+		font-size 41px
+		color #fff
+		font-weight 700
+		margin-top 24px
+		@media (max-width 992px)
+			font-size 28px
+			margin-top 0
+
+	&__call
+		font-size 24px
+		color #fff
+		font-weight 700
+		margin 34px 0 16px
+		display block
+		&:hover
+			color #fff
+			text-decoration none
+		@media (max-width 992px)
+			margin-top 0
+			margin-bottom 8px
+
+	&__subtitle
+		font-size 17px
+		color #fff
+		line-height 27px
+		@media (max-width 992px)
+			font-size 18px
+			margin-bottom 16px
+
+	&::after
+		position absolute
+		top 0
+		right 0
+		left 0
+		bottom 0
+		background rgba(76, 76, 76, .9)
+		content ''
+		z-index -1

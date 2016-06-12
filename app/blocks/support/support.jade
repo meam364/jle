@@ -1,0 +1,28 @@
+include ../title/title
+include ../subtitle/subtitle
+
+mixin support()
+	+b.support&attributes(attributes)
+		.container
+			+title() Extensive Driver Support
+			+subtitle() We&nbsp;have the best driver managers in&nbsp;the industry! Our team will make sure you have the work you need and resolve any problems you may have. You never have to&nbsp;go&nbsp;without feeling like your not part of&nbsp;our family.
+			+e.list
+				.row
+					.col-md-4
+						+e.item
+							+e('img').photo(src='assets/images/charlee.png' class='img-responsive')
+							+e.info
+								+e.name Charlee Foster
+								+e.post Driver Support Manager
+					.col-md-4
+						+e.item._reverse
+							+e('img').photo(src='assets/images/tony.png' class='img-responsive')
+							+e.info
+								+e.name Tony Blatnik
+								+e.post Driver Support Manager
+					.col-md-4
+						+e.item
+							+e('img').photo(src='assets/images/rachel.png' class='img-responsive')
+							+e.info
+								+e.name Rachel Lekron
+								+e.post Driver Support Manager

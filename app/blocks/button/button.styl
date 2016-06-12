@@ -1,0 +1,30 @@
+.button
+	display inline-block
+	border-radius 5px
+	color #fff
+	font-size 17px
+	width 100%
+	padding 12px 0 12px 0
+	font-weight bold
+	font-family 'Arial Black'
+	@media (max-width: 992px)
+		font-size 20px
+	&_size
+		&_s
+			font-size 17px
+		&_m
+			font-size 21px
+			padding 16px 0 16px 0
+	&:hover,
+	&:focus,
+	&:active
+		text-decoration none
+		color #fff
+	&_success
+		background-color #00c448
+		&:hover
+			background #029137
+	&_danger
+		background-image linear-gradient(to bottom, #cf1a2e 0%,#b60115 100%)
+		&:hover
+			background #66000b

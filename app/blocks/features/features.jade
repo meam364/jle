@@ -1,0 +1,18 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../feature/feature
+
+mixin features()
+	+b.features&attributes(attributes)
+		.container
+			+title()
+				| JLE Driver Benefits
+			+subtitle()
+				| When you drive for JLE, you&rsquo;ll get a&nbsp;host of&nbsp;great benefits. We&nbsp;have one of&nbsp;the lowest driver <nobr>turn-over</nobr> rates in&nbsp;the industry because of&nbsp;our executive level benefits for all of&nbsp;our drivers.
+			+e.list
+				+feature({icon: 'cash', name: 'Base Pay', items: ['Industry leading pay.', 'Our top drivers earn over $70K/yr.', 'Average drivers earn over $59K/yr.']})
+				+feature({icon: 'two-dollar', name: 'Bonus Pay', items: ['$1,000 sign on bonus.', 'Monthly performance bonuses.']})
+				+feature({icon: 'compesation', name: 'Additional Compensation', items: ['Tarp pay.', 'Stop pay.', 'Layover pay.', 'Detention pay.', 'Breakdown pay.']})
+				+feature({icon: 'shield', name: 'Benefits', items: ['Employer sponsored health and Dental.', 'Employer paid vision, life, short & long term disability.', '401K with company match.']})
+				+feature({icon: 'boat', name: 'Hometime & Vacation Days JLE Driver', items: ['Home weekly or more depending on location.', 'Paid vacation.', 'Paid holidays.']})
+				+feature({icon: 'truck', name: 'Equipment', items: ['Brand new fleet vehicles.']})
