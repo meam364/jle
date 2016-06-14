@@ -1,0 +1,89 @@
+.offer-banner
+	background url(../images/offer-banner.jpg) no-repeat 50% 50%
+	background-size cover
+	background-attachment fixed
+	text-align center
+	padding-top 10px
+	padding-bottom 70px
+	position relative
+	z-index 1
+	min-height 100vh
+	font-family 'Lato'
+	& .container
+		@media (min-width 992px)
+			width 960px
+
+	@media (max-width: 992px)
+		padding-bottom 20px
+	&:after
+		content ''
+		background-color rgba(0,0,0, .75)
+		position absolute
+		top 0
+		left 0
+		bottom 0
+		right 0
+		z-index -1
+	&__logo
+		margin-bottom 40px
+		@media (max-width: 992px)
+			margin-bottom 25px
+	&__title
+		font-size 50px
+		color #fff
+		text-align left
+		font-weight bold
+		@media (max-width: 992px)
+			text-align center
+			font-size 32px
+	&__subtitle
+		font-size 36px
+		color #fff
+		text-align left
+		font-weight bold
+		margin-bottom 30px
+		@media (max-width: 992px)
+			text-align center
+			font-size 25px
+			margin-bottom 14px
+			margin-bottom 12px
+	&__requirements
+		text-align left
+		margin-top 42px
+		margin-bottom 34px
+		color #fff
+		font-weight bold
+		font-size 19px
+		margin-left 4px
+		@media (max-width: 992px)
+			text-align center
+			margin-top 0
+			margin-bottom 31px
+		&-title
+			@media (max-width: 992px)
+				margin-bottom -6px
+	&__button
+		max-width 330px
+		width 100%
+		@media (max-width: 992px)
+			margin 22px auto 0 auto
+			max-width 360px
+		&-call
+			max-width 360px
+			width 100%
+			margin-top 30px
+			margin-bottom 20px
+			font-size 21px
+			font-weight bold
+			@media (max-width: 992px)
+				margin-left auto
+				margin-right auto
+				margin-top 6px
+				margin-bottom 0
+	&__form
+		margin-top 40px
+		@media (max-width: 992px)
+			margin-left auto
+			margin-right auto
+			margin-bottom 25px
+			margin-top 48px
