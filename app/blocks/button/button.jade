@@ -1,3 +1,7 @@
 mixin button(data)
 	-data= data || {}
-	+b('a').button(href=data.href class='button_'+data.mod class='button_size_'+data.size)= data.text
+
+	if(data.type == 'button')
+		+b('button').button(class != data.mod ? '_' + data.mod : '' class != data.size ? '_size_' + data.size : '')&attributes(attributes)= data.text
+	else
+		+b('a').button(href=data.href class != data.mod ? '_' + data.mod : '' class != data.size ? '_size_' + data.size : '')&attributes(attributes)= data.text

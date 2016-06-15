@@ -1,6 +1,14 @@
+include ../button/button
+
 mixin form(data)
 	-data = data || {}
-	+b.form&attributes(attributes)
-		+e.title Start Your Driver Application
+	+b('form').form&attributes(attributes)
+		if(data.title)
+			+e.title= data.title
+		else
+			+e.title Start Your Driver Application
 		block
-		+e('button').button Start Application
+		if(data.button)
+			+button({text: data.button.text, type: data.button.type, mod: data.button.mod, size: data.button.size})
+		else
+			+e('button').button Start Application

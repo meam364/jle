@@ -1,10 +1,10 @@
 include ../list/list
 include ../line-breaker/line-breaker
 include ../button/button
-include ../form-temp/form-temp
+include ../form/form
 
-mixin offer-banner()
-	+b.offer-banner&attributes(attributes)
+mixin offer-banner(mod)
+	+b.offer-banner(class = mod ? '_' + mod : '')&attributes(attributes)
 		.container
 			+e('img').logo(src='assets/images/banner-logo.png')
 			.row
@@ -25,7 +25,26 @@ mixin offer-banner()
 						+button({mod: 'danger', href: '#', text: 'Call Us: (866) 986-1392', size: 'm'})
 					+e.line-breaker(class='hidden-sm hidden-xs')
 						+line-breaker({text: 'or'})
-					+form-temp().offer-banner__form
+					+form({title: 'Have Our Recruiter Call You', button: {text: 'Call me now!', mod: 'danger', type: 'button', size: 'm'}})._rounded.offer-banner__form
+						+e('label').label(for='name') First Name
+						+e('input').input(id='name' name='name')
+						+e('label').label(for='phone') Phone
+						+e('input').input(id='phone' type='phone' name='phone')
+						+e('label').label Have at&nbsp;least 2 years of&nbsp;OTR experience?
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='No')
+							| No
+						+e('label').label Have a&nbsp;clean driving record in&nbsp;past 3 years?
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='No')
+							| No
+
 					+e.line-breaker(class='visible-sm-block visible-xs-block')
 						+line-breaker({text: 'or'})
 					+e.button(class='visible-sm-block visible-xs-block')

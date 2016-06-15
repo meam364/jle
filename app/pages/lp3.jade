@@ -1,0 +1,24 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/offer-banner/offer-banner
+include /blocks/features/features
+include /blocks/hiring/hiring
+include /blocks/testimonials/testimonials
+include /blocks/support/support
+include /blocks/banner-bottom/banner-bottom
+include /blocks/footer/footer
+include /blocks/modal/modal
+
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	+offer-banner('not-full')
+	+features()
+	+hiring()
+	+testimonials()
+	+support()
+	+banner-bottom()
+	+footer()
+	+modal()

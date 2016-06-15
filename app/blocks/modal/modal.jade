@@ -1,0 +1,10 @@
+include ../privacy/privacy
+
+mixin modal()
+	+b#privacy.modal.fade(tabindex='-1')
+		.modal-dialog.modal-lg
+			.modal-content
+				.modal-body
+					+privacy()
+				.modal-footer
+					button.btn.btn-default(type='button', data-dismiss='modal') Close

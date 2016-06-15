@@ -1,4 +1,6 @@
 mixin footer()
 	+b.footer&attributes(attributes)
 		.container
+			+e('a').link(data-toggle='modal' href='#' data-target='#privacy') Privacy Policy
+			br
 			| Copyright &copy; 2016 JLEIndustries
