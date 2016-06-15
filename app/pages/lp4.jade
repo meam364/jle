@@ -1,0 +1,13 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/notification/notification
+include /blocks/header/header
+include /blocks/banner-colorful/banner-colorful
+
+block head
+	- var pageTitle = 'CSSSR Project Template';
+
+block content
+	+notification()
+	+header()
+	+banner-colorful()

@@ -1,5 +1,5 @@
 mixin list(data)
-	+b.list&attributes(attributes)
+	+b.list(class=data.mod ? '_' + data.mod : '')&attributes(attributes)
 		+e.name= data.name
 		+e('ul').items
 			each item in data.items

@@ -1,0 +1,50 @@
+include ../list/list
+include ../line-breaker/line-breaker
+include ../button/button
+include ../form/form
+
+mixin banner-colorful()
+	+b.banner-colorful&attributes(attributes)
+		.container
+			.row
+				.col-md-7
+					+e.title Flatbed OTR Drivers
+					+e.subtitle $52,000- $70,000 a year
+					+e.requirements(class='visible-sm-block visible-xs-block')
+						+e.requirements-title Requirements:
+						+e.requirements-text Class A CDL, 25 Years of Age, Safe MVR
+					+list({name: 'What JLE Drivers Get:', items: ['Up to $0.53 per mile', 'Brand New Equipment', 'Excellent benefits', 'Sign-on bonus', 'Home weekly']})
+					+e.requirements(class='hidden-sm hidden-xs')
+						+e.requirements-title Requirements:
+						+e.requirements-text Class A CDL, 25 Years of Age, Safe MVR
+					+e.button(class='hidden-sm hidden-xs')
+						+button({mod: 'success', href: '#', text: 'Apply Online'})
+				.col-md-5
+					+e.button-call
+						+button({mod: 'danger', href: '#', text: 'Call Us: (866) 986-1392', size: 'm'})
+					+e.line-breaker(class='hidden-sm hidden-xs')
+						+line-breaker({text: 'or'})
+					+form({title: 'Have Our Recruiter Call You', button: {text: 'Call me now!', mod: 'bleed', type: 'button', size: 'm'}})._square.offer-banner__form
+						+e('label').label(for='name') First Name
+						+e('input').input(id='name' name='name')
+						+e('label').label(for='phone') Phone
+						+e('input').input(id='phone' type='phone' name='phone')
+						+e('label').label Have at&nbsp;least 2 years of&nbsp;OTR experience?
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='No')
+							| No
+						+e('label').label Have a&nbsp;clean driving record in&nbsp;past 3 years?
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='No')
+							| No
+
+					+e.line-breaker(class='visible-sm-block visible-xs-block')
+						+line-breaker({text: 'or'})
+					+e.button(class='visible-sm-block visible-xs-block')
+						+button({mod: 'success', href: '#', text: 'Apply Online'})
