@@ -12,17 +12,15 @@ include /blocks/footer/footer
 include /blocks/modal/modal
 
 
-block head
-	- var pageTitle = 'CSSSR Project Template';
-
 block content
-	+notification()
-	+header()
-	+banner-colorful()
-	+features()
-	+hiring()
-	+testimonials()
-	+support()
-	+banner-bottom()
-	+footer()
-	+modal()
+	.lp4-page
+		+notification()
+		+header()
+		+banner-colorful()
+		+features()
+		+hiring()
+		+testimonials()
+		+support()
+		+banner-bottom({button: {mod: 'white', size: '2s', type: 'button', text: 'Start Application'}})
+		+footer()
+		+modal()

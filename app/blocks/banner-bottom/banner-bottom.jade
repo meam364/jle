@@ -1,6 +1,7 @@
 include ../form/form
 
-mixin banner-bottom()
+mixin banner-bottom(data)
+	-var data = data || data
 	+b.banner-bottom&attributes(attributes)
 		.container
 			.row
@@ -9,7 +10,7 @@ mixin banner-bottom()
 					+e('a').call Call Us: (724) 812-0057
 					+e.subtitle With our industry leading pay, benefits, and our driver oriented company, join our team is&nbsp;a&nbsp;no&nbsp;brainer! Simply fill out the form to&nbsp;the right to&nbsp;get started.
 				.col-md-6
-					+form()
+					+form(data)
 						+e('input').input(placeholder='Name' name='name')
 						+e('input').input(type='email' placeholder='Email' name='email')
 						+e('input').input(type='phone' placeholder='Phone' name='phone')
