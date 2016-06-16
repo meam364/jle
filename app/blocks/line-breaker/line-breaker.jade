@@ -1,5 +1,5 @@
 mixin line-breaker(data)
-	+b.line-breaker&attributes(attributes)
+	+b.line-breaker(class= data.mod ? '_' + data.mod : '')&attributes(attributes)
 		+e.line
 		+e.text= data.text
 		+e.line

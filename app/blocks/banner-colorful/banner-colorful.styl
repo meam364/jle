@@ -1,6 +1,47 @@
 .banner-colorful
 	font-family montserat
+	padding-bottom 146px
+	padding-top 50px
+	@media (max-width 992px)
+		text-align center
+		padding-top 30px
+		padding-bottom 50px
+
 	&__title
 		color black
 		font-size 40px
 		font-weight 700
+		@media (max-width: 992px)
+			font-size 30px
+
+	&__subtitle
+		color #999
+		font-size 25px
+		font-weight 400
+		@media (max-width: 992px)
+			margin-bottom 20px
+			font-size 20px
+
+	&__list
+		margin-bottom 36px
+		@media (max-width: 992px)
+			margin-bottom 12px
+
+	&__button
+		max-width 392px
+		@media (max-width 992px)
+			margin-left auto
+			margin-right auto
+		&-call
+			margin-bottom 36px
+			max-width 392px
+			@media (max-width 992px)
+				margin-left auto
+				margin-right auto
+
+	&__line-breaker
+		margin-top 36px
+		margin-bottom 40px
+		@media (max-width: 992px)
+			margin-bottom 30px
+			margin-top 26px
