@@ -13,6 +13,11 @@
 	&_size
 		&_s
 			font-size 17px
+
+		&_s2
+			font-size 20px
+			padding 10px
+
 		&_m
 			font-size 21px
 			padding 16px 0 16px 0
@@ -34,8 +39,10 @@
 		color #333
 		border 1px solid #ccc
 		box-shadow 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 2px 0 rgba(255, 255, 255, 0.35)
-		transition box-shadow .3s
-		&:hover
+		transition box-shadow .2s
+		&:hover,
+		&:focus,
+		&:active
 			box-shadow none
 			color #333
 	&_blue
@@ -44,5 +51,10 @@
 		background-image linear-gradient(180deg, #2f62f1 0%, #133fbb 100%)
 		border 1px solid #00c
 		box-shadow 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 2px 0 rgba(255, 255, 255, 0.35)
+		transition all .2s
+		&:hover
+			box-shadow none
+			border 1px solid transparent
+
 	&__highlight
 		color #00c

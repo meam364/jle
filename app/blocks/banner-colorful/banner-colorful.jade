@@ -11,28 +11,39 @@ mixin banner-colorful()
 				.col-md-7
 					+label({text: 'NOW HIRING'})
 					+e.title Flatbed OTR Drivers
-					+e.subtitle $52,000- $70,000 a year
-					+e.list
-						+list({mod: 'blue', name: 'What JLE Drivers Get:', items: ['Up to $0.53 per mile', 'Brand New Equipment', 'Excellent benefits', 'Sign-on bonus', 'Home weekly']})
-					+e.list
-						+list({mod: 'blue', name: 'Requirements', items: ['Class A CDL', '25 Years of Age', 'Safe MVR']})
+					+e.subtitle $52,000 - $70,000 a year
+					+e.lists
+						+e.list
+							+list({mod: 'blue', name: 'What JLE Drivers Get:', items: ['Up to $0.53 per mile', 'Brand New Equipment', 'Excellent benefits', 'Sign-on bonus', 'Home weekly']})
+						+e.list
+							+list({mod: 'blue', name: 'Requirements:', items: ['Class A CDL', '25 Years of Age', 'Safe MVR']})
 					+e.button(class='hidden-sm hidden-xs')
-						+button({mod: 'blue', href: '#', text: 'Apply Online'})
+						+button({mod: 'blue', href: '#', text: 'Apply Online', size: 's2'})
 				.col-md-5
 					+e.button-call
-						+button({mod: 'white', href: '#', text: 'Call Us <span class="button__highlight">(866) 986-1392</span>', size: 'm'})
+						+button({mod: 'white', href: '#', text: 'Call Us <span class="button__highlight">(866) 986-1392</span>', size: 's2'})
 					+e.line-breaker(class='hidden-sm hidden-xs')
 						+line-breaker({text: 'or', mod: 'grey'})
-					+form({title: 'Have Our Recruiter Call You', button: {text: 'Call me now!', mod: 'white', type: 'button', size: 'm'}})._square.offer-banner__form
+					+form({title: 'Have Our Recruiter Call You', button: {text: 'Call me now!', mod: 'white', type: 'button', size: 's2'}})._square.offer-banner__form
 						+e('label').label(for='name') First Name
 						+e('input').input(id='name' name='name')
 						+e('label').label(for='phone') Phone
 						+e('input').input(id='phone' type='phone' name='phone')
-						+e('label').label(for='otr') Have at&nbsp;least 2 years of&nbsp;OTR experience?
-						+e('input').input(id='otr' name='otr')
-						+e('label').label(for='driving') Have a&nbsp;clean driving record in&nbsp;past 3 years?
-						+e('input').input(id='driving' name='driving')
+						+e('label').label Have at&nbsp;least 2 years of&nbsp;OTR experience?
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='otr' value='No')
+							| No
+						+e('label').label Have a&nbsp;clean driving record in&nbsp;past 3 years?
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='yes')
+							| Yes
+						+e('label').radio
+							+e('input').radio-input(type='radio' name='clean-driving' value='No')
+							| No
 					+e.line-breaker(class='visible-sm-block visible-xs-block')
 						+line-breaker({text: 'or', mod: 'grey'})
 					+e.button(class='visible-sm-block visible-xs-block')
-						+button({mod: 'blue', href: '#', text: 'Apply Online'})
+						+button({mod: 'blue', size: 's2', href: '#', text: 'Apply Online'})
